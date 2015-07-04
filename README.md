@@ -22,7 +22,7 @@
 
 - 添加文字类水印<br>
   **image**          -- 要添加图片的水印<br>
-  **waterMaskImage** -- 要作为水印的图片<br>
+  **waterMaskImage** -- 要作为水印的富文本<br>
   **position**       -- 水印的位置,为枚举类型<br>
   **offset**         -- 水印的偏移,在默认位置的基础上调整
 ```objc
