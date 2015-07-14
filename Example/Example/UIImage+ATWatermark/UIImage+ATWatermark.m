@@ -36,6 +36,19 @@
     return finalImage;
 }
 
+- (instancetype)addWatermarkWithText:(NSAttributedString *)attrString {
+    return [UIImage imageWithUIImage:self watermarkOfText:attrString];
+}
+
+- (instancetype)addWatermarkWithText:(NSAttributedString *)attrString position:(ATWatermarkPositon)position {
+    return [UIImage imageWithUIImage:self watermarkOfText:attrString position:position];
+
+}
+
+- (instancetype)addWatermarkWithText:(NSAttributedString *)attrString position:(ATWatermarkPositon)position offset:(CGPoint)offset {
+    return [UIImage imageWithUIImage:self watermarkOfText:attrString position:position offset:offset];
+}
+
 + (instancetype)imageWithUIImage:(UIImage *)image watermarkOfImage:(UIImage *)watermarkImage {
     return [UIImage imageWithUIImage:image watermarkOfImage:watermarkImage position:ATWatermarkPositonBottomRight offset:CGPointZero];
 }
@@ -56,6 +69,19 @@
     UIImage *finalImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return finalImage;
+}
+
+
+- (instancetype)addWatermarkWithImage:(UIImage *)image {
+    return [UIImage imageWithUIImage:self watermarkOfImage:image];
+}
+
+- (instancetype)addWatermarkWithImage:(UIImage *)waterMaskImage position:(ATWatermarkPositon) postion {
+    return [UIImage imageWithUIImage:self watermarkOfImage:waterMaskImage position:postion];
+}
+
+- (instancetype)addWatermarkWithImage:(UIImage *)waterMaskImage position:(ATWatermarkPositon) postion offset:(CGPoint)offset {
+    return [UIImage imageWithUIImage:self watermarkOfImage:waterMaskImage position:postion offset:offset];
 }
 
 + (CGPoint)watermarkStartPointWithImageSize:(CGSize)imageSize watermarkSize:(CGSize)watermarkSize position:(ATWatermarkPositon)postion offset:(CGPoint) offset {

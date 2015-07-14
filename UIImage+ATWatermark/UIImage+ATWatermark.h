@@ -40,6 +40,10 @@ typedef enum
  */
 + (instancetype)imageWithUIImage:(UIImage *)image watermarkOfText:(NSAttributedString *)attrString position:(ATWatermarkPositon)position offset:(CGPoint)offset;
 
+- (instancetype)addWatermarkWithText:(NSAttributedString *)attrString;
+- (instancetype)addWatermarkWithText:(NSAttributedString *)attrString position:(ATWatermarkPositon)position;
+- (instancetype)addWatermarkWithText:(NSAttributedString *)attrString position:(ATWatermarkPositon)position offset:(CGPoint)offset;
+
 /**
  *  使用图片制作水印
  *
@@ -59,5 +63,9 @@ typedef enum
  *  同上,offset参数用来调整水印的位置
  */
 + (instancetype)imageWithUIImage:(UIImage *)image watermarkOfImage:(UIImage *)waterMaskImage position:(ATWatermarkPositon) postion offset:(CGPoint)offset;
+
+- (instancetype)addWatermarkWithImage:(UIImage *)image;
+- (instancetype)addWatermarkWithImage:(UIImage *)waterMaskImage position:(ATWatermarkPositon) postion;
+- (instancetype)addWatermarkWithImage:(UIImage *)waterMaskImage position:(ATWatermarkPositon) postion offset:(CGPoint)offset;
 
 @end
