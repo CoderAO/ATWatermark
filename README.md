@@ -18,6 +18,11 @@
 + (instancetype)imageWithUIImage:(UIImage *)image watermarkOfText:(NSAttributedString *)attrString position:(ATWatermarkPositon)position;
 
 + (instancetype)imageWithUIImage:(UIImage *)image watermarkOfText:(NSAttributedString *)attrString position:(ATWatermarkPositon)position offset:(CGPoint)offset;
+
+- (instancetype)addWatermarkWithImage:(UIImage *)image;
+- (instancetype)addWatermarkWithImage:(UIImage *)waterMaskImage position:(ATWatermarkPositon) postion;
+- (instancetype)addWatermarkWithImage:(UIImage *)waterMaskImage position:(ATWatermarkPositon) postion offset:(CGPoint)offset;
+
 ```
 
 - 添加文字类水印<br>
@@ -31,6 +36,10 @@
 + (instancetype)imageWithUIImage:(UIImage *)image watermarkOfImage:(UIImage *)waterMaskImage position:(ATWatermarkPositon) postion;
 
 + (instancetype)imageWithUIImage:(UIImage *)image watermarkOfImage:(UIImage *)waterMaskImage position:(ATWatermarkPositon) postion offset:(CGPoint)offset;
+
+- (instancetype)addWatermarkWithText:(NSAttributedString *)attrString;
+- (instancetype)addWatermarkWithText:(NSAttributedString *)attrString position:(ATWatermarkPositon)position;
+- (instancetype)addWatermarkWithText:(NSAttributedString *)attrString position:(ATWatermarkPositon)position offset:(CGPoint)offset;
 ```
 ###注意:
 1. 作为水印的图片都是按照原图大小绘制的
