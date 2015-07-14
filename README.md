@@ -19,6 +19,7 @@
 
 + (instancetype)imageWithUIImage:(UIImage *)image watermarkOfText:(NSAttributedString *)attrString position:(ATWatermarkPositon)position offset:(CGPoint)offset;
 
+// 对应的类方法
 - (instancetype)addWatermarkWithImage:(UIImage *)image;
 - (instancetype)addWatermarkWithImage:(UIImage *)waterMaskImage position:(ATWatermarkPositon) postion;
 - (instancetype)addWatermarkWithImage:(UIImage *)waterMaskImage position:(ATWatermarkPositon) postion offset:(CGPoint)offset;
@@ -37,6 +38,7 @@
 
 + (instancetype)imageWithUIImage:(UIImage *)image watermarkOfImage:(UIImage *)waterMaskImage position:(ATWatermarkPositon) postion offset:(CGPoint)offset;
 
+// 对应的类方法
 - (instancetype)addWatermarkWithText:(NSAttributedString *)attrString;
 - (instancetype)addWatermarkWithText:(NSAttributedString *)attrString position:(ATWatermarkPositon)position;
 - (instancetype)addWatermarkWithText:(NSAttributedString *)attrString position:(ATWatermarkPositon)position offset:(CGPoint)offset;
